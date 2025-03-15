@@ -107,4 +107,9 @@ onSubmit() {
         reader.readAsDataURL(file);
       }
     }
+
+    cancelEdit() {
+      // Điều hướng về trang danh sách blog hoặc trang chính
+      this.router.navigate(['/blog']);
+    }
 }

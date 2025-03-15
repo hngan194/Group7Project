@@ -1,89 +1,134 @@
 @media (forced-colors: active) {
-    .create-post-form, .form-group, .file-upload, button.btn {
-      background-color: Canvas; /* Sử dụng màu nền tương thích với chế độ Forced Colors */
-      color: CanvasText;         /* Sử dụng màu văn bản tương thích */
-    }}
-  .create-post-form {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  .create-post-form, .form-group, .file-upload, button.btn {
+    background-color: Canvas; /* Sử dụng màu nền tương thích với chế độ Forced Colors */
+    color: CanvasText; /* Sử dụng màu văn bản tương thích */
   }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  .quill-editor {
-    height: auto;
-    min-height: 300px; /* Chiều cao tối thiểu cho quill-editor */
-  }
-  
-  .ql-container {
-    min-height: 300px; /* Chiều cao cho container của quill-editor */
-    border-radius: 5px;
-    border: 1px solid #ddd;
-  }
-  
-  .ql-editor {
-    min-height: 200px; /* Chiều cao cho vùng nhập liệu bên trong quill-editor */
-    font-size: 16px;
-  }
-  
-  .file-upload {
-    margin-bottom: 20px;
-  }
-  
-  .file-upload input[type="file"] {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  button.btn {
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    background-color: #8b6b45; /* Màu cho nút */
-    color: #f9f9f9;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button.btn[disabled] {
-    background-color: #ccc; /* Màu cho nút khi bị vô hiệu hóa */
-    cursor: not-allowed;
-  }
-  
-  button.btn:hover {
-    background-color: #7a5a37; /* Màu khi hover */
-  }
+}
+
+.create-post-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #F4F1EC; /* Đồng bộ với màu form chỉnh sửa sản phẩm */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tiêu đề */
+h2 {
+  color: #5f3e22; /* Nâu đậm */
+  font-size: 22px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Form nhóm - Đảm bảo các input thẳng hàng */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label */
+label {
+  font-weight: bold;
+  color: #5f3e22;
+  margin-bottom: 5px;
+}
+
+/* Căn chỉnh input, textarea, select */
+input, textarea, select {
+  width: 100%; /* Đảm bảo toàn bộ có cùng độ rộng */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: white;
+  box-sizing: border-box; /* Giúp không bị lệch do padding */
+}
+
+/* Textarea có cùng chiều rộng với input */
+textarea {
+  min-height: 80px;
+  resize: vertical; /* Chỉ cho phép thu nhỏ theo chiều dọc */
+}
+
+/* Editor Quill */
+.quill-editor {
+  height: auto;
+  min-height: 300px; /* Chiều cao tối thiểu cho quill-editor */
+}
+
+.ql-container {
+  min-height: 300px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.ql-editor {
+  min-height: 200px;
+  font-size: 16px;
+}
+
+/* Upload file */
+.file-upload {
+  margin-bottom: 20px;
+}
+
+.file-upload input[type="file"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Định dạng chung cho button */
+.button-group {
+  display: flex;
+  justify-content: center; /* Căn giữa */
+  gap: 20px; /* Khoảng cách giữa hai nút */
+  margin-top: 15px;
+}
+
+/* Button Đăng bài */
+.submit-button {
+  background: #5f3e22; /* Nâu đậm */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 50%; /* Đảm bảo hai nút có cùng kích thước */
+  text-align: center;
+}
+
+.submit-button:hover {
+  background-color: #675654;
+}
+
+/* Button Hủy */
+.cancel-button {
+  background: #da323e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 50%;
+  text-align: center;
+}
+
+.cancel-button:hover {
+  background-color: #b92b2b;
+}
+
+/* Vô hiệu hóa nút */
+.submit-button:disabled {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

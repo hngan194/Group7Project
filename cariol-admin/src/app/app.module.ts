@@ -15,6 +15,12 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { BlogAddComponent } from './components/blogadd/blogadd.component';
 import { QuillModule } from 'ngx-quill';
 import { BlogEditComponent } from './components/blogedit/blogedit.component';
+import { ProductManagementComponent } from './components/product-management/product-management.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { EditProductComponent } from './components/edit-product/edit-product.component';
+import { VoucherComponent } from './components/voucher/voucher.component';
+
+
 
 @NgModule({
   declarations: [
@@ -27,6 +33,9 @@ import { BlogEditComponent } from './components/blogedit/blogedit.component';
     DashboardComponent,  // Đảm bảo khai báo DashboardComponent
     BlogAddComponent,
     BlogEditComponent,
+    ProductManagementComponent,
+    AddProductComponent,
+    EditProductComponent,
     // Các component khác
   ],
   imports: [

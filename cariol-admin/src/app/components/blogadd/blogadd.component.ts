@@ -55,4 +55,9 @@ export class BlogAddComponent {
       });
       
     }
+
+    cancelPost() {
+      // Điều hướng về trang danh sách blog hoặc trang chính
+      this.router.navigate(['/blog']);
+    }
   }

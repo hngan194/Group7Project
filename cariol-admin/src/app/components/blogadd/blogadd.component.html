@@ -53,6 +53,9 @@
     <label for="images">Chọn tệp</label>
     <input type="file" id="file" name="images" (change)="onFileChange($event)">
   </div>
+  <div class="button-group">
+  <button type="submit" class="submit-button" [disabled]="!blogForm.form.valid">Đăng bài</button>
 
-  <button type="submit" class="btn btn-primary" [disabled]="!blogForm.form.valid">Đăng bài</button>
+  <button type="button" class="cancel-button" (click)="cancelPost()">Hủy</button>
+</div>
 </form>

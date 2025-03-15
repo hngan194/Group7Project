@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #F7F5F2;
+
 }
 
 /* Hộp đăng nhập */
@@ -21,7 +21,7 @@
     background: white;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Đổ bóng đậm hơn để nổi bật */
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
@@ -34,7 +34,7 @@
 /* Tiêu đề */
 .login-box h2 {
     margin-bottom: 20px;
-    color: #5C4033;
+    color: #5f3e22; /* Màu nâu chủ đạo */
     font-size: 24px;
     font-weight: 600;
 }
@@ -49,7 +49,7 @@
 .input-group label {
     display: block;
     font-weight: 600;
-    color: #5C4033;
+    color: #5f3e22; /* Đồng bộ màu label */
     margin-bottom: 6px;
 }
 
@@ -57,7 +57,7 @@
 .input-group input {
     width: 100%;
     padding: 12px;
-    border: 2px solid #8B5D33;
+    border: 2px solid #5f3e22; /* Đồng bộ màu border */
     border-radius: 6px;
     font-size: 16px;
     transition: all 0.3s ease-in-out;
@@ -65,16 +65,16 @@
 
 /* Ô input khi focus */
 .input-group input:focus {
-    border-color: #5C4033;
+    border-color: #675654;
     outline: none;
-    box-shadow: 0 0 8px rgba(139, 93, 51, 0.4);
+    box-shadow: 0 0 8px rgba(95, 62, 34, 0.4);
 }
 
 /* Nút đăng nhập */
 .login-btn {
     width: 100%;
     padding: 12px;
-    background: #5C4033;
+    background: #5f3e22; /* Màu nâu chủ đạo */
     color: white;
     border: none;
     border-radius: 6px;
@@ -86,7 +86,7 @@
 
 /* Nút đăng nhập hover */
 .login-btn:hover {
-    background: #8B5D33;
+    background: #675654;
     transform: translateY(-2px);
 }
 
@@ -103,13 +103,13 @@
 
 .forgot-password a {
     text-decoration: none;
-    color: #5C4033;
+    color: #5f3e22;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
 }
 
 .forgot-password a:hover {
-    color: #8B5D33;
+    color: #675654;
     text-decoration: underline;
 }
 

@@ -1,0 +1,103 @@
+<!-- <div class="add-product-container">
+    <h2>Thêm sản phẩm mới</h2>
+    
+    <form (ngSubmit)="postProduct()" #productForm="ngForm">
+      <div class="form-group">
+        <label for="name">Tên sản phẩm:</label>
+        <input type="text" id="name" [(ngModel)]="newProduct.name" name="name" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="price">Giá:</label>
+        <input type="number" id="price" [(ngModel)]="newProduct.price" name="price" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Mô tả:</label>
+        <textarea id="description" [(ngModel)]="newProduct.description" name="description" required></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="categoryName">Phân loại:</label>
+        <input type="text" id="categoryName" [(ngModel)]="newProduct.categoryName" name="categoryName" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="color">Màu sắc:</label>
+        <input type="text" id="color" [(ngModel)]="newProduct.color" name="color" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="infor">Thông tin bổ sung:</label>
+        <textarea id="infor" [(ngModel)]="newProduct.infor" name="infor" required></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="amount">Số lượng:</label>
+        <input type="number" id="amount" [(ngModel)]="newProduct.amount" name="amount" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="image">Chọn ảnh sản phẩm:</label>
+        <input type="file" (change)="onFileSelected($event)" id="image" />
+      </div>
+  
+      <button type="submit" [disabled]="!productForm.form.valid">Thêm sản phẩm</button>
+    </form>
+  </div>
+   -->
+
+
+
+   <div class="add-product-container">
+    <h2>Thêm sản phẩm mới</h2>
+
+    <form (ngSubmit)="postProduct()" #productForm="ngForm">
+        <div class="form-group">
+            <label for="name">Tên sản phẩm:</label>
+            <input type="text" id="name" [(ngModel)]="newProduct.name" name="name" required />
+        </div>
+
+        <div class="form-group">
+            <label for="price">Giá:</label>
+            <input type="number" id="price" [(ngModel)]="newProduct.price" name="price" required />
+        </div>
+
+        <div class="form-group">
+            <label for="description">Mô tả:</label>
+            <textarea id="description" [(ngModel)]="newProduct.description" name="description" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="categoryName">Phân loại:</label>
+            <select id="categoryName" [(ngModel)]="newProduct.categoryName" name="categoryName" required>
+                <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="color">Màu sắc:</label>
+            <input type="text" id="color" [(ngModel)]="newProduct.color" name="color" required />
+        </div>
+
+        <div class="form-group">
+            <label for="infor">Thông tin bổ sung:</label>
+            <textarea id="infor" [(ngModel)]="newProduct.infor" name="infor" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="amount">Số lượng:</label>
+            <input type="number" id="amount" [(ngModel)]="newProduct.amount" name="amount" required />
+        </div>
+
+        <div class="form-group">
+            <label for="image">Chọn ảnh sản phẩm:</label>
+            <input type="file" (change)="onFileSelected($event)" id="image" />
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="submit-button" [disabled]="!productForm.form.valid">Thêm sản phẩm</button>
+            <button type="button" class="cancel-button" (click)="cancelAdd()">Hủy</button>
+        </div>
+    </form>
+</div>
