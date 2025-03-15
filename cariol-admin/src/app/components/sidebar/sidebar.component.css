@@ -13,7 +13,7 @@
 /* Định dạng thẻ <a> */
 .sidebar a {
     text-decoration: none;
-    color: #5C4033;
+    color: #5f3e22;
     display: block; /* Đảm bảo toàn bộ ô có thể bấm */
     padding: 15px;
 }
@@ -34,7 +34,7 @@
 
 /* Hover - Đổi màu nền & chữ */
 .sidebar ul li:hover {
-    background: #8B5D33;
+    background: #5f3e22;
 }
 
 /* Đổi màu chữ khi hover vào <li> và <a> */
