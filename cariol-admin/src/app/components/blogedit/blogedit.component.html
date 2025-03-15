@@ -1,4 +1,3 @@
-<p>blogedit works!</p>
 <html>
 <head>
     <meta charset='utf-8'>
@@ -63,5 +62,8 @@
       </div>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary" [disabled]="!blogForm.form.valid">Chỉnh sửa</button>
+
+  <div class="button-group">
+  <button type="submit" class="submit-button" [disabled]="!blogForm.form.valid">Chỉnh sửa</button>
+  <button type="button" class="cancel-button" (click)="cancelEdit()">Hủy</button></div>
 </form>

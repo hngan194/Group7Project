@@ -1,4 +1,4 @@
-.blog-container {
+.product-management-container {
   padding: 20px;
   background: #F4F1EC;
   border-radius: 10px;
@@ -17,6 +17,22 @@ button {
 
 button:hover {
   background-color: #675654;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  
+}
+
+.search-container input, .search-container select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background: white;
+  outline: none;
+  width: 20%;
 }
 
 table {

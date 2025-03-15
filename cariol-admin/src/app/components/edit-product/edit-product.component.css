@@ -1,0 +1,104 @@
+/* Container chỉnh sửa sản phẩm */
+.edit-product-container {
+    padding: 20px;
+    background: #F4F1EC;
+    border-radius: 10px;
+    margin-top: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tiêu đề */
+h2 {
+    color: #5f3e22;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Form nhóm - Đảm bảo các input thẳng hàng */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label */
+label {
+    font-weight: bold;
+    color: #5f3e22;
+    margin-bottom: 5px;
+}
+
+/* Căn chỉnh input, textarea, select */
+input, textarea, select {
+    width: 100%; /* Đảm bảo toàn bộ có cùng độ rộng */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+    box-sizing: border-box; /* Giúp không bị lệch do padding */
+}
+
+/* Textarea có cùng chiều rộng với input */
+textarea {
+    min-height: 80px;
+    resize: vertical; /* Chỉ cho phép thu nhỏ theo chiều dọc */
+}
+
+/* Select box đồng nhất với input */
+select {
+    appearance: none; /* Ẩn mặc định của trình duyệt */
+    cursor: pointer;
+}
+
+/* Căn chỉnh nút */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Nút Cập nhật */
+.update-button {
+    background: #5f3e22;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 48%;
+}
+
+.update-button:hover {
+    background-color: #675654;
+}
+
+/* Nút Hủy */
+.cancel-button {
+    background: #da323e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 48%;
+}
+
+.cancel-button:hover {
+    background-color: #b92b2b;
+}
+
+/* Ảnh xem trước */
+.preview-img {
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 100px;
+}

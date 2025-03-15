@@ -1,43 +1,14 @@
-<div class="container">
-    <h2>Quản lý Phân quyền</h2>
+<div class="role-management-container">
+    <h2>QUẢN LÝ PHÂN QUYỀN</h2>
 
-    <!-- Button Thêm Người Dùng -->
-    <div class="add-user-form">
-        <button (click)="openAddUserPopup()">Thêm tài khoản</button>
-    </div>
-
-    <!-- Popup nhập thông tin tài khoản -->
-    <div class="popup" *ngIf="isAddUserPopupOpen">
-        <h3>Thêm tài khoản</h3>
-        <!-- <input type="text" [(ngModel)]="newUser.last_name" placeholder="Tên"> -->
-        <input type="email" [(ngModel)]="newUser.email" placeholder="Email">
-        <select [(ngModel)]="newUser.role">
-            <option value="admin">Admin</option>
-            <option value="staff">Staff</option>
-        </select>
-        <div class="popup-actions">
-            <button (click)="checkUserExists()">Xác nhận</button>
-            <button (click)="closeAddUserPopup()">Hủy</button>
-        </div>
-    </div>
-
-    <!-- Popup nhập mật khẩu xác nhận -->
-    <div class="popup" *ngIf="isConfirmPopupOpen">
-        <h3>Xác nhận Thêm Người Dùng</h3>
-        <p>Vui lòng nhập mật khẩu để xác nhận:</p>
-        <input type="password" [(ngModel)]="adminPassword" placeholder="Nhập mật khẩu">
-        <div class="popup-actions">
-            <button (click)="confirmAddUser()">Xác nhận</button>
-            <button (click)="closeConfirmPopup()">Hủy</button>
-        </div>
-    </div>
+    <!-- Nút thêm người dùng -->
+    <button (click)="openAddUserPopup()">+ Thêm tài khoản</button>
 
     <!-- Bảng danh sách người dùng -->
     <table>
         <thead>
             <tr>
                 <th>#</th>
-                <!-- <th>Tên</th> -->
                 <th>Email</th>
                 <th>Vai trò</th>
                 <th>Thao tác</th>
@@ -46,13 +17,49 @@
         <tbody>
             <tr *ngFor="let user of users; let i = index">
                 <td>{{ i + 1 }}</td>
-                <!-- <td>{{ user.last_name }}</td> -->
                 <td>{{ user.email }}</td>
                 <td>{{ user.role }}</td>
                 <td>
-                    <button class="delete-btn" (click)="deleteUser(i)">Xóa</button>
+                    <div class="modal-actions">
+                        <button class="delete-btn" (click)="deleteUser(i)">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
                 </td>
             </tr>
         </tbody>
     </table>
+
+    <!-- Popup thêm người dùng -->
+    <div *ngIf="isAddUserPopupOpen" class="modal">
+        <div class="modal-content">
+            <h2>Thêm tài khoản</h2>
+            <label>Email</label>
+            <input type="email" [(ngModel)]="newUser.email" placeholder="Nhập email">
+            
+            <label>Vai trò</label>
+            <select [(ngModel)]="newUser.role">
+                <option value="admin">Admin</option>
+                <option value="staff">Staff</option>
+            </select>
+
+            <div>
+                <button (click)="checkUserExists()">Xác nhận</button>
+                <button class="close-btn" (click)="closeAddUserPopup()">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup nhập mật khẩu xác nhận -->
+    <div *ngIf="isConfirmPopupOpen" class="modal">
+        <div class="modal-content">
+            <h2>Xác nhận Thêm Người Dùng</h2>
+            <p>Vui lòng nhập mật khẩu để xác nhận:</p>
+            <input type="password" [(ngModel)]="adminPassword" placeholder="Nhập mật khẩu">
+            <div>
+                <button (click)="confirmAddUser()">Xác nhận</button>
+                <button class="close-btn" (click)="closeConfirmPopup()">Hủy</button>
+            </div>
+        </div>
+    </div>
 </div>
